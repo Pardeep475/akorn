@@ -5,6 +5,9 @@ import 'package:akorn/app/auth/verification/controller/email_verification_contro
 import 'package:akorn/app/auth/verification/controller/verification_controller.dart';
 import 'package:akorn/app/dashboard/content/controller/content_controller.dart';
 import 'package:akorn/app/dashboard/controller/dashboard_controller.dart';
+import 'package:akorn/app/dashboard/my_account/page/my_account_screen.dart';
+import 'package:akorn/app/dashboard/select_payee/controller/select_payee_controller.dart';
+import 'package:akorn/app/dashboard/university_fee/controller/university_fee_controller.dart';
 import 'package:akorn/app/dashboard/upload_visa/controller/upload_visa_controller.dart';
 import 'package:get/get.dart';
 
@@ -21,19 +24,24 @@ class ApplicationBinding implements Bindings {
         tag: BindingConst.onBoardingScreenBinding);
     Get.lazyPut(() => RegisterController(),
         tag: BindingConst.registerScreenBinding);
-    Get.lazyPut(() => LoginController(),
-        tag: BindingConst.loginScreenBinding);
+    Get.lazyPut(() => LoginController(), tag: BindingConst.loginScreenBinding);
     Get.lazyPut(() => VerificationController(),
         tag: BindingConst.verificationScreenBinding);
-    Get.lazyPut(() =>  EmailVerificationController(),
+    Get.lazyPut(() => EmailVerificationController(),
         tag: BindingConst.emailVerificationScreenBinding);
-    Get.lazyPut(() =>  UploadVisaController(),
+    Get.lazyPut(() => UploadVisaController(),
         tag: BindingConst.uploadVisaScreenBinding);
-    Get.lazyPut(() =>  ProfileController(),
+    Get.lazyPut(() => ProfileController(),
         tag: BindingConst.profileScreenBinding);
-    Get.lazyPut(() =>  DashboardController(),
+    Get.lazyPut(() => DashboardController(),
         tag: BindingConst.dashboardScreenBinding);
-    Get.lazyPut(() =>  ContentController(),
+    Get.lazyPut(() => ContentController(),
         tag: BindingConst.dashboardScreenBinding);
+    Get.lazyPut(() => MyAccountScreen(),
+        tag: BindingConst.accountScreenBinding);
+    Get.lazyPut(() => SelectPayeeController(),
+        tag: BindingConst.selectPayeeScreenBinding);
+    Get.lazyPut(() => UniversityFeeController(),
+        tag: BindingConst.universityFeeScreenBinding);
   }
 }

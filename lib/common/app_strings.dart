@@ -39,7 +39,7 @@ class AppStrings {
   static const String profile = "Profile";
   static const String points = "Points";
   static const String trending = "Trending";
-  static const String search = "Search";
+
   static const String staffName = "Staff Name";
   static const String storeName = "Store Name";
   static const String staffIdNumber = "Staff ID Number";
@@ -174,7 +174,23 @@ class AppStrings {
   static const String paymentComingSoon = "Apple Pay & Google Pay coming soon";
   static const String startingLevel = "Starting Level";
   static const String unlockingFullAccessToAkron = "You're on your way to unlocking full access to Akron";
-
+  static const String currentAccount = "Current account";
+  static const String pay = "Pay";
+  static const String transfar = "Transfar";
+  static const String settings = "Settings";
+  static const String balanceChart = "Balance chart";
+  static const String spentThisMonth = "Spent this month: £500.34";
+  static const String share = "Share";
+  static const String accountDetails = "Account details";
+  static const String transactions = "Transactions";
+  static const String seeALL = "SEE ALL";
+  static const String selectPayee = "Select Payee";
+  static const String search = "Search";
+  static const String universityFee = "University fee";
+  static const String from = "From";
+  static const String university = "University";
+  static const String reference = "Reference";
+  static const String amount = "Amount";
 
 
 

@@ -1,3 +1,4 @@
+import 'package:akorn/app/dashboard/profile/controller/profile_controller.dart';
 import 'package:akorn/common/app_images.dart';
 import 'package:akorn/common/widget/app_text.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import '../../../../common/widget/my_behavior.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+   ProfileScreen({super.key});
+
+
+  final ProfileController _controller = Get.isRegistered<ProfileController>()
+      ? Get.find<ProfileController>()
+      : Get.put(ProfileController());
 
   @override
   Widget build(BuildContext context) {

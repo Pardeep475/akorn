@@ -18,5 +18,7 @@ class RouteString {
   static const String uploadVisaScreen = "/UPLOAD_VISA_SCREEN";
   static const String profileScreen = "/PROFILE_SCREEN";
   static const String contentScreen = "/CONTENT_SCREEN";
+  static const String selectPayeeScreen = "/SELECT_PAYEE_SCREEN";
+  static const String universityFeeScreen = "/UNIVERSITY_FEE_SCREEN";
 
 }

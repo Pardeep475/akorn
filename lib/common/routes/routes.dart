@@ -5,6 +5,8 @@ import 'package:akorn/app/auth/verification/page/email_verification_screen.dart'
 import 'package:akorn/app/auth/verification/page/verification_screen.dart';
 import 'package:akorn/app/dashboard/content/page/content_screen.dart';
 import 'package:akorn/app/dashboard/page/dashboard_screen.dart';
+import 'package:akorn/app/dashboard/select_payee/screen/select_payee_screen.dart';
+import 'package:akorn/app/dashboard/university_fee/page/university_fee_screen.dart';
 import 'package:akorn/app/dashboard/upload_visa/page/upload_visa_screen.dart';
 import 'package:akorn/common/routes/route_strings.dart';
 import 'package:get/get.dart';
@@ -45,15 +47,23 @@ class Routes {
       ),
       GetPage(
         name: RouteString.profileScreen,
-        page: () => const ProfileScreen(),
+        page: () => ProfileScreen(),
       ),
       GetPage(
         name: RouteString.dashBoardScreen,
-        page: () =>  DashboardScreen(),
+        page: () => DashboardScreen(),
       ),
       GetPage(
         name: RouteString.contentScreen,
-        page: () =>  const ContentScreen(),
+        page: () => const ContentScreen(),
+      ),
+      GetPage(
+        name: RouteString.selectPayeeScreen,
+        page: () => SelectPayeeScreen(),
+      ),
+      GetPage(
+        name: RouteString.universityFeeScreen,
+        page: () => UniversityFeeScreen(),
       ),
     ];
   }

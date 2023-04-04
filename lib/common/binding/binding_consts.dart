@@ -17,6 +17,9 @@ class BindingConst {
   static const String dashboardScreenBinding = "DASHBOARD_SCREEN_BINDING";
   static const String contentScreenBinding = "CONTENT_SCREEN_BINDING";
   static const String profileScreenBinding = "PROFILE_SCREEN_BINDING";
+  static const String accountScreenBinding = "ACCOUNT_SCREEN_BINDING";
+  static const String selectPayeeScreenBinding = "SELECT_PAYEE_SCREEN_BINDING";
+  static const String universityFeeScreenBinding = "UNIVERSITY_FEE_SCREEN_BINDING";
 
 
 

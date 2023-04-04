@@ -41,4 +41,6 @@ class AppColor {
   static const imagePickerBorderBackground = Color(0xFFC8C8C8);
   static const profileBorderBackground = Color(0xFFA4A4A4);
   static const bottomBarItemColor = Color(0xFF797A81);
+  static const darkRed = Color(0xFFD10C0C);
+  static const radioButtonColor = Color(0xFF545454);
 }

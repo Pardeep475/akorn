@@ -23,7 +23,7 @@ class AppTextField extends StatelessWidget {
   final Function(String)? onChanged;
   final VoidCallback? onEditingComplete;
   final TextInputType? keyboardType;
-
+final bool isShadow;
   const AppTextField({
     Key? key,
     this.placeHolder,
@@ -39,47 +39,82 @@ class AppTextField extends StatelessWidget {
     this.fillColor =  AppColor.backgroundColor,
     this.onChanged,
     this.keyboardType,
+    this.isShadow = true,
     this.onEditingComplete,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      elevation: 1.0,
-      shadowColor: AppColor.backgroundColor,
-      borderRadius: BorderRadius.all(Radius.circular(20.0.sp)),
-      child: TextFormField(
-        minLines: minLines,
-        maxLines: maxLines,
-        controller: controller,
-        obscureText: obscureText,
-        validator: (value) => validator == null ? null : validator!(value),
-        onChanged: (value) => onChanged == null ? null : onChanged!(value),
-        onEditingComplete: onEditingComplete,
-        onFieldSubmitted: (value) {},
-        onSaved: (value) {},
-        keyboardType: keyboardType,
-        decoration: InputDecoration(
-            isDense: true,
-            filled: true,
-            hintStyle: TextStyle(
-                color: AppColor.hintColor,
-                fontFamily: AppStrings.montserratFontFamily,
-                fontSize: 40.sp),
-            border: _border(),
-            contentPadding: isChangePadding
-                ? EdgeInsets.symmetric(vertical: 0, horizontal: 10.w)
-                : null,
-            disabledBorder: _border(),
-            enabledBorder: _border(),
-            focusedBorder: _border(),
-            errorBorder: _border(),
-            focusedErrorBorder: _border(),
-            errorStyle: const TextStyle(
-                color: AppColor.red, fontFamily: AppStrings.montserratFontFamily),
-            hintText: placeHolder,
-            fillColor: fillColor),
-      ),
+    if(isShadow){
+      return Material(
+        elevation: 1.0,
+        shadowColor: AppColor.backgroundColor,
+        borderRadius: BorderRadius.all(Radius.circular(20.0.sp)),
+        child: TextFormField(
+          minLines: minLines,
+          maxLines: maxLines,
+          controller: controller,
+          obscureText: obscureText,
+          validator: (value) => validator == null ? null : validator!(value),
+          onChanged: (value) => onChanged == null ? null : onChanged!(value),
+          onEditingComplete: onEditingComplete,
+          onFieldSubmitted: (value) {},
+          onSaved: (value) {},
+          keyboardType: keyboardType,
+          decoration: InputDecoration(
+              isDense: true,
+              filled: true,
+              hintStyle: TextStyle(
+                  color: AppColor.hintColor,
+                  fontFamily: AppStrings.montserratFontFamily,
+                  fontSize: 40.sp),
+              border: _border(),
+              contentPadding: isChangePadding
+                  ? EdgeInsets.symmetric(vertical: 0, horizontal: 10.w)
+                  : null,
+              disabledBorder: _border(),
+              enabledBorder: _border(),
+              focusedBorder: _border(),
+              errorBorder: _border(),
+              focusedErrorBorder: _border(),
+              errorStyle: const TextStyle(
+                  color: AppColor.red, fontFamily: AppStrings.montserratFontFamily),
+              hintText: placeHolder,
+              fillColor: fillColor),
+        ),
+      );
+    }
+    return TextFormField(
+      minLines: minLines,
+      maxLines: maxLines,
+      controller: controller,
+      obscureText: obscureText,
+      validator: (value) => validator == null ? null : validator!(value),
+      onChanged: (value) => onChanged == null ? null : onChanged!(value),
+      onEditingComplete: onEditingComplete,
+      onFieldSubmitted: (value) {},
+      onSaved: (value) {},
+      keyboardType: keyboardType,
+      decoration: InputDecoration(
+          isDense: true,
+          filled: true,
+          hintStyle: TextStyle(
+              color: AppColor.hintColor,
+              fontFamily: AppStrings.montserratFontFamily,
+              fontSize: 40.sp),
+          border: _border(),
+          contentPadding: isChangePadding
+              ? EdgeInsets.symmetric(vertical: 0, horizontal: 10.w)
+              : null,
+          disabledBorder: _border(),
+          enabledBorder: _border(),
+          focusedBorder: _border(),
+          errorBorder: _border(),
+          focusedErrorBorder: _border(),
+          errorStyle: const TextStyle(
+              color: AppColor.red, fontFamily: AppStrings.montserratFontFamily),
+          hintText: placeHolder,
+          fillColor: fillColor),
     );
   }
 

@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 
 import '../../../common/app_color.dart';
 import '../../../common/widget/app_text.dart';
+import '../my_account/page/my_account_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   DashboardScreen({super.key});
@@ -20,11 +21,11 @@ class DashboardScreen extends StatelessWidget {
           ? Get.find<DashboardController>()
           : Get.put(DashboardController());
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    ContentScreen(),
-    ContentScreen(),
-    UploadVisaScreen(),
-    ProfileScreen(),
+  final List<Widget> _widgetOptions =  <Widget>[
+    const ContentScreen(),
+    const ContentScreen(),
+    const UploadVisaScreen(),
+    MyAccountScreen(),
   ];
 
   void _onItemTapped(int index) {

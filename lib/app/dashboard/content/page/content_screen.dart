@@ -10,7 +10,6 @@ import '../../../../common/app_strings.dart';
 import '../../../../common/widget/app_text.dart';
 import '../../../../common/widget/expansion_widget.dart';
 import '../../../../common/widget/my_behavior.dart';
-import 'dart:math' as math;
 
 class ContentScreen extends StatelessWidget {
   const ContentScreen({super.key});
@@ -293,7 +292,7 @@ class ContentScreen extends StatelessWidget {
                                       textSize: 36.sp,
                                     ),
                                   ),
-                                  // Image.asset(AppImages.imgGPay,height: 148.sp,width: 148.sp,),
+                                  Image.asset(AppImages.imgGPay,height: 148.sp,width: 148.sp,),
                                   Image.asset(
                                     AppImages.imgApplePay,
                                     height: 148.sp,

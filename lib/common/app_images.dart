@@ -33,4 +33,7 @@ class AppImages {
   static const iconCheckGreen = "assets/images/iconCheckGreen.svg";
   static const iconPencil = "assets/images/iconPencil.svg";
   static const iconTotalBalance = "assets/images/iconTotalBalance.svg";
+  static const iconSettings = "assets/images/iconSettings.svg";
+  static const iconBalanceChart = "assets/images/iconBalanceChart.svg";
+  static const iconShare = "assets/images/iconShare.svg";
 }
